@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
 
     public AvatarInteraction myAvatarInteractionScript;
+    public LookAtScript myLookAtScript;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +16,13 @@ public class PlayerScript : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void OnTriggerStay(Collider other){
+        if (other.tag == "Public") {
+            myLookAtScript.LookAtCamera();
+        }
+
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -55,7 +63,7 @@ public class PlayerScript : MonoBehaviour {
 			{
                 myAvatarInteractionScript.inPublic = false;
 				Debug.Log("Public Space " + myAvatarInteractionScript.inPublic);
-				//myAvatarInteractionScript.PublicInteract(); //where the interaction will go
+                myLookAtScript.ResetAvatarRotation();
 
 			}
 
