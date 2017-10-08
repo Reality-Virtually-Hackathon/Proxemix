@@ -7,11 +7,11 @@ public class LookAtScript : MonoBehaviour {
 	public Transform target;
 	public Quaternion originalRotationValue;
     float rotationResetSpeed = 100000.0f;
-
-    public static LookAtScript lookinstance;
+    public PlayerScript myPlayerScript;
+    //public static LookAtScript lookinstance;
 
     void Start(){
-        lookinstance = this;
+        //lookinstance = this;
 		originalRotationValue = transform.rotation; // save the initial rotation
 	}
 	

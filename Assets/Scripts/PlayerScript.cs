@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour {
 
     public AvatarInteraction myAvatarInteractionScript;
     public LookAtScript myLookAtScript;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -18,33 +19,55 @@ public class PlayerScript : MonoBehaviour {
 	}
 
     void OnTriggerStay(Collider other){
-        other.gameObject.GetComponent<LookAtScript>().LookAtCamera();
-
-
+        /*
+        if (other.tag == "Public") {
+            Debug.Log("Gothere");
+            if (other == null)
+            {
+                return;
+            }
+            Debug.Log("Gothere too");
+            GameObject go = other.gameObject;
+            if (go == null)
+            {
+                return;
+            }
+            Debug.Log("Gothere3");
+            LookAtScript las = other.GetComponent<LookAtScript>();
+            Debug.Log("Gothere4");
+            if (las == null)
+            {
+                Debug.Log("las is not null");
+            }
+            las.LookAtCamera();
+            Debug.Log("got here");
+         }*/
     }
-
+    
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Public")
         {
-            
-			other.gameObject.GetComponent<AvatarInteraction>().inPublic = true;
+            myAvatarInteractionScript.inPublic = true;
+			//other.gameObject.GetComponent<AvatarInteraction>().inPublic = true;
             Debug.Log("Public Space " + myAvatarInteractionScript.inPublic);
             myAvatarInteractionScript.PublicInteract(); //where the interaction will go
-			//myLookAtScript.LookAtCamera();
+            myLookAtScript.LookAtCamera();
 
         }
 
         if (other.tag == "Social")
         {
-            other.gameObject.GetComponent<AvatarInteraction>().inSocial = true;
+            myAvatarInteractionScript.inSocial = true;
+            //other.gameObject.GetComponent<AvatarInteraction>().inSocial = true;
             Debug.Log("Social Space " + myAvatarInteractionScript.inSocial);
-
+            
         }
 
         if (other.tag == "Personal")
         {
-            other.gameObject.GetComponent<AvatarInteraction>().inPersonal = true;
+            myAvatarInteractionScript.inPersonal = true;
+            //other.gameObject.GetComponent<AvatarInteraction>().inPersonal = true;
             Debug.Log("Personal Space " + myAvatarInteractionScript.inPersonal);
 
         }
@@ -57,12 +80,14 @@ public class PlayerScript : MonoBehaviour {
         }
 
     }
+    
 
 		void OnTriggerExit(Collider other)
 		{
 			if (other.tag == "Public")
 			{
-                other.gameObject.GetComponent<AvatarInteraction>().inPublic = false;
+                myAvatarInteractionScript.inPublic = false;
+                //other.gameObject.GetComponent<AvatarInteraction>().inPublic = false;
 				Debug.Log("Public Space " + myAvatarInteractionScript.inPublic);
                 myLookAtScript.ResetAvatarRotation();
 
@@ -70,15 +95,17 @@ public class PlayerScript : MonoBehaviour {
 
 			if (other.tag == "Social")
 			{
-                other.gameObject.GetComponent<AvatarInteraction>().inSocial = false;
-				Debug.Log("Social Space " + myAvatarInteractionScript.inSocial);
+                myAvatarInteractionScript.inSocial = false;
+                //other.gameObject.GetComponent<AvatarInteraction>().inSocial = false;
+                Debug.Log("Social Space " + myAvatarInteractionScript.inSocial);
 
 			}
 
 			if (other.tag == "Personal")
 			{
-                other.gameObject.GetComponent<AvatarInteraction>().inPersonal = false;
-				Debug.Log("Personal Space " + myAvatarInteractionScript.inPersonal);
+            myAvatarInteractionScript.inPersonal = false;
+            //other.gameObject.GetComponent<AvatarInteraction>().inPersonal = false;
+            Debug.Log("Personal Space " + myAvatarInteractionScript.inPersonal);
 
 			}
 

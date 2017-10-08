@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio for Mac
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxemix", "Proxemix.csproj", "{DCC0F795-EA37-7FF0-07C0-5BFA751044A4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxemix.Editor", "Proxemix.Editor.csproj", "{74427CA9-AC9A-A6B6-0EDB-4017214D8776}"
