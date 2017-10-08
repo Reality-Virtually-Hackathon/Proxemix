@@ -1,0 +1,2 @@
+/Users/D358_2/Documents/ProxemixVR/Temp/UnityVS_obj/Debug/ProxemixVR.csprojResolveAssemblyReference.cache
+/Users/D358_2/Documents/ProxemixVR/Temp/UnityVS_obj/Debug/ProxemixVR.csproj.CoreCompileInputs.cache
