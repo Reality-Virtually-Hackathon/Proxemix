@@ -9,9 +9,11 @@ public class AvatarInteraction : MonoBehaviour {
 	public bool inPersonal = false;
 	public int comfortLevel = 50;
 
+    public static AvatarInteraction instance;
+
 	// Use this for initialization
 	void Start () {
-		
+        instance = this;
 	}
 	
 	// Update is called once per frame

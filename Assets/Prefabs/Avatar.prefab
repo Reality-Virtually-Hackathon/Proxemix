@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 136866398597832660}
   - component: {fileID: 114615993130404428}
   - component: {fileID: 54060395515655100}
+  - component: {fileID: 114612460675990136}
   m_Layer: 8
   m_Name: Avatar
   m_TagString: Avatar
@@ -1054,6 +1055,7 @@ GameObject:
   - component: {fileID: 33209006463529482}
   - component: {fileID: 135654221480344858}
   - component: {fileID: 23915527251747798}
+  - component: {fileID: 114384224742196638}
   m_Layer: 9
   m_Name: PublicSpace
   m_TagString: Public
@@ -1487,8 +1489,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1099331989980844}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 15}
+  m_LocalRotation: {x: 0, y: 0.9815772, z: -0, w: -0.19106588}
+  m_LocalPosition: {x: -8.14, y: 0, z: -10.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4692788137214824}
@@ -1499,7 +1501,7 @@ Transform:
   - {fileID: 4451271844008568}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 202.03, z: 0}
 --- !u!4 &4475578818349420
 Transform:
   m_ObjectHideFlags: 1
@@ -2324,6 +2326,32 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114384224742196638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938231667991230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ab62ade4e584483a8886899b197a92b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  originalRotationValue: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114612460675990136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1099331989980844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ab62ade4e584483a8886899b197a92b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  originalRotationValue: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &114615993130404428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2335,7 +2363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 765ec8f6310164b08a252cf4cad1b887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inPublic: 0
+  inPublic: 1
   inSocial: 0
   inPersonal: 0
   comfortLevel: 50

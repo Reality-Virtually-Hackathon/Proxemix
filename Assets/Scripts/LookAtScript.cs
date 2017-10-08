@@ -8,8 +8,10 @@ public class LookAtScript : MonoBehaviour {
 	public Quaternion originalRotationValue;
     float rotationResetSpeed = 100000.0f;
 
+    public static LookAtScript lookinstance;
 
     void Start(){
+        lookinstance = this;
 		originalRotationValue = transform.rotation; // save the initial rotation
 	}
 	

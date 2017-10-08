@@ -9,7 +9,7 @@ public class PlayerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
+        //look = gameObject.GetComponent<AvatarInteraction>();
 	}
 	
 	// Update is called once per frame
@@ -18,9 +18,8 @@ public class PlayerScript : MonoBehaviour {
 	}
 
     void OnTriggerStay(Collider other){
-        if (other.tag == "Public") {
-            myLookAtScript.LookAtCamera();
-        }
+        other.gameObject.GetComponent<LookAtScript>().LookAtCamera();
+
 
     }
 
@@ -28,22 +27,24 @@ public class PlayerScript : MonoBehaviour {
     {
         if (other.tag == "Public")
         {
-            myAvatarInteractionScript.inPublic = true;
+            
+			other.gameObject.GetComponent<AvatarInteraction>().inPublic = true;
             Debug.Log("Public Space " + myAvatarInteractionScript.inPublic);
             myAvatarInteractionScript.PublicInteract(); //where the interaction will go
+			//myLookAtScript.LookAtCamera();
 
         }
 
         if (other.tag == "Social")
         {
-            myAvatarInteractionScript.inSocial = true;
+            other.gameObject.GetComponent<AvatarInteraction>().inSocial = true;
             Debug.Log("Social Space " + myAvatarInteractionScript.inSocial);
 
         }
 
         if (other.tag == "Personal")
         {
-            myAvatarInteractionScript.inPersonal = true;
+            other.gameObject.GetComponent<AvatarInteraction>().inPersonal = true;
             Debug.Log("Personal Space " + myAvatarInteractionScript.inPersonal);
 
         }
@@ -51,7 +52,7 @@ public class PlayerScript : MonoBehaviour {
         if (other.tag == "Avatar")
         {
             Debug.Log("Don't Touch Me!");
-            myAvatarInteractionScript.comfortLevel = 0;
+            other.gameObject.GetComponent<AvatarInteraction>().comfortLevel = 0;
             Debug.Log("Comfort Level: " + myAvatarInteractionScript.comfortLevel + ", You Lose");
         }
 
@@ -61,7 +62,7 @@ public class PlayerScript : MonoBehaviour {
 		{
 			if (other.tag == "Public")
 			{
-                myAvatarInteractionScript.inPublic = false;
+                other.gameObject.GetComponent<AvatarInteraction>().inPublic = false;
 				Debug.Log("Public Space " + myAvatarInteractionScript.inPublic);
                 myLookAtScript.ResetAvatarRotation();
 
@@ -69,14 +70,14 @@ public class PlayerScript : MonoBehaviour {
 
 			if (other.tag == "Social")
 			{
-                myAvatarInteractionScript.inSocial = false;
+                other.gameObject.GetComponent<AvatarInteraction>().inSocial = false;
 				Debug.Log("Social Space " + myAvatarInteractionScript.inSocial);
 
 			}
 
 			if (other.tag == "Personal")
 			{
-                myAvatarInteractionScript.inPersonal = false;
+                other.gameObject.GetComponent<AvatarInteraction>().inPersonal = false;
 				Debug.Log("Personal Space " + myAvatarInteractionScript.inPersonal);
 
 			}
@@ -84,7 +85,7 @@ public class PlayerScript : MonoBehaviour {
 			if (other.tag == "Avatar")
 			{
 				Debug.Log("Don't Touch Me!");
-				myAvatarInteractionScript.comfortLevel = 0;
+				other.gameObject.GetComponent<AvatarInteraction>().comfortLevel = 0;
 				Debug.Log("Comfort Level: " + myAvatarInteractionScript.comfortLevel + ", You Lose");
 			}
 
