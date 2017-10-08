@@ -1,3 +1,9 @@
+### WHAT WE USED
+## Unity Game Engine 2017
+## VR Toolkit www.vrtk.io
+## Environment Assets from Barking Dog from Asset Store https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=relevance/query=publisher:21180
+## Adobe Character Generator
+
 ![vrtk logo](https://raw.githubusercontent.com/thestonefox/VRTK/master/Assets/VRTK/Examples/ExampleResources/Images/logos/vrtk-capsule-clear.png)
 > ### VRTK - Virtual Reality Toolkit
 > A productive VR Toolkit for rapidly building VR solutions in Unity3d.
